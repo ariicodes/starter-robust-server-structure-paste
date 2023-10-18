@@ -27,7 +27,7 @@ app.get('/pastes', (req, res) => {
 
 // Variable to hold the next ID
 // Because some IDs may already be used, find the largest assigned ID
-
+let lastPasteId = pastes.reduce((maxId, paste) => Math.max(maxId, paste.id), 0);
 
 // Post paste data handler
 app.post('/pastes', (req, res, next) => {
