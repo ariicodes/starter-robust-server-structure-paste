@@ -65,6 +65,9 @@ function pasteExists(req, res, next) {
 		message: `Paste id not found: ${pasteId}`,
 	});
 }
+////////////////////////////////////////////////
+// ------------ 👆🏾 MIDDLEWARE 👆🏾 ------------ //
+////////////////////////////////////////////////
 
 function list(req, res) {
 	const { userId } = req.params;
