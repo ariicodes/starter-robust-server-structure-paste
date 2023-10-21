@@ -1,14 +1,16 @@
 const express = require('express');
 const app = express();
 
-const pastes = require('./data/pastes-data');
 const pastesRouter = require('./pastes/pastes.router');
+const usersRouter = require('./users/users.router');
 
 // Adding body property to the request
 app.use(express.json());
 
-// Paste router
-app.use("/pastes", pastesRouter); // Note: app.use
+// Pastes router
+app.use('/pastes', pastesRouter);
+// Users router
+app.use('/users', usersRouter);
 
 // Not found handler
 app.use((req, res, next) => {
